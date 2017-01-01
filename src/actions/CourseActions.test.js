@@ -37,7 +37,7 @@ describe('Async Actions', () => {
     nock.cleanAll();
   });
 
-  it('should create BEGIN_AJAX_CALL and LOAD_COURSES_SUCCESS when loading courses', () => {
+  it('should create BEGIN_AJAX_CALL and LOAD_COURSES_SUCCESS when loading courses', (done) => {
     const expectedActions = [
       {type: types.BEGIN_AJAX_CALL},
       {type: types.LOAD_COURSES_SUCCESS, body: {courses: [{id: 'clean-code', title: 'Clean Code'}]}}
